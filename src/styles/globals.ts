@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import backgroundSvg from '../assets/bgsvg.svg'
 
 export const GlobalStyles = createGlobalStyle`
   html {
@@ -10,12 +11,10 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #0D0316, #961FFF);
-    background-color: #e5e5f7;
-    background-image: 
-        repeating-radial-gradient(circle at 145px 40px, transparent 0, #00000042 120px),
-        repeating-linear-gradient(#09000f, #24003e);
-    background-blend-mode: multiply, multiply;
+    background-image: url(${backgroundSvg});
+    background-color: #000000;
+    background-attachment: fixed;
+    background-size: cover;
     color: ${props => props.theme.colors.text};
     font-family: 'Roboto';
 
