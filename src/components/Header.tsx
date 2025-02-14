@@ -24,6 +24,10 @@ const Navbar = styled.nav`
   @media (max-width: 1200px) {
     max-width: 768px;
   }
+
+  @media (max-width: 768px) {
+    max-width: 320px;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -39,8 +43,8 @@ const HeaderComponent = () => {
     <Header>
       <Navbar>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/sobre">Sobre</NavLink>
-        <NavLink to="/contato">Contato</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </Navbar>
     </Header>
   );

@@ -88,8 +88,8 @@ const Hero = () => {
                 <Typing text={["Beginner Developer", "Possible Fullstack", "But PRO on front-end", "Hire me please"]} speed={60} eraseDelay={1000} typingDelay={20} eraseSpeed={20} />
             </Subtitulo>
             <Buttons>
-                <Button variant="contained" startIcon={<GoDownload />} href="/cv.pdf" download="Ramon_Garcia_CV.pdf" sx={{ backgroundColor: "#1f3661", color: "white", "&:hover": { backgroundColor: "#1c59c9", }, whiteSpace: "nowrap", }}>Baixar CV</Button>
-                <Button variant="contained" target="_blank" rel="noopener noreferrer" href="https://wa.me/5511953432576"  sx={{ backgroundColor: "#181f2c", color: "#17aa54", "&:hover": { backgroundColor: "#17aa54", color: "white" }, }}>Contate-me</Button>
+                <Button variant="contained" startIcon={<GoDownload />} href="/cv.pdf" download="Ramon_Garcia_CV.pdf" sx={{ backgroundColor: "#1f3661", color: "white", "&:hover": { backgroundColor: "#1c59c9", }, whiteSpace: "nowrap", }}>Download CV</Button>
+                <Button variant="contained" target="_blank" rel="noopener noreferrer" href="https://wa.me/5511953432576"  sx={{ backgroundColor: "#181f2c", color: "#17aa54", "&:hover": { backgroundColor: "#17aa54", color: "white" }, }}>Contact-me</Button>
             </Buttons>
         </HeroContainer>
     );
