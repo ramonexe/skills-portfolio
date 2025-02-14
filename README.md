@@ -1,2 +1,2 @@
-# Portifólio Ramon Garcia
-Portifólio para demonstrar skills com TS, Vite, React e Styled-Components
+# Portfólio Ramon Garcia
+Portfólio a fim de demonstrar skills com TS, Vite, React e Styled-Components
