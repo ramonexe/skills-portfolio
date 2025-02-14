@@ -1,17 +1,14 @@
-import styled from 'styled-components';
-
-const Container = styled.div`
-    background-color: #8b5a5a;
-    height: 100vh;
-    width: 100%;
-`;
+import Wrapper from '../components/Wrapper';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
 
 const Home = () => {
-  return (
-    <Container>
-      <h1>Home</h1>
-    </Container>
-  );
+    return (
+        <Wrapper>
+            <Header/>
+            <Hero />
+        </Wrapper>
+    );
 };
 
 export default Home;
