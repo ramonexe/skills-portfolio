@@ -11,12 +11,23 @@ const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
 `;
 
 const Navbar = styled.nav`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
   gap: 20px;
+
+  @media (max-width: 1200px) {
+    max-width: 768px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 320px;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -32,8 +43,8 @@ const HeaderComponent = () => {
     <Header>
       <Navbar>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">Sobre</NavLink>
-        <NavLink to="/contact">Contato</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </Navbar>
     </Header>
   );
