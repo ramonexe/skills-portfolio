@@ -62,7 +62,7 @@ const pulse = keyframes`
 `;
 
 const Foto = styled.div`
-  background-image: url("https://cdn-icons-png.flaticon.com/512/9182/9182925.png");
+  background-image: url("https://avatars.githubusercontent.com/u/143695500?v=4");
   background-size: cover;
   background-position: center;
   height: 25vh;
