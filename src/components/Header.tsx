@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const Header = styled.header`
   background-color: rgba(0, 0, 0, 0.5);
@@ -30,7 +29,7 @@ const Navbar = styled.nav`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   color: ${(props) => props.theme.colors.text};
   text-decoration: none;
   &:hover {
@@ -42,9 +41,9 @@ const HeaderComponent = () => {
   return (
     <Header>
       <Navbar>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink href="#">Home</NavLink>
+        <NavLink href="#skills">Skills</NavLink>
+        <NavLink href="#about">About</NavLink>
       </Navbar>
     </Header>
   );

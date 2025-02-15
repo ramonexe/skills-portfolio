@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const SkillsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
@@ -44,7 +44,7 @@ const Skill = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 45%;
+    width: 40%;
     padding: 20px;
     background-color: ${(props) => props.theme.colors.background};
     border-radius: 10px;
@@ -95,30 +95,30 @@ const Skills = () => {
                 <Skill>
                     <SkillName>JavaScript</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={55} color='#F5DD1B'/>
+                        <ProgressBarFiller value={48} color='#F5DD1B'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>55%</ProgressLabel>
+                    <ProgressLabel>48%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>TypeScript</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={75} color='#2F74C0'/>
+                        <ProgressBarFiller value={67} color='#2F74C0'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>75%</ProgressLabel>
+                    <ProgressLabel>67%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>Java</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={45} color='#E21E22'/>
+                        <ProgressBarFiller value={32} color='#E21E22'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>45%</ProgressLabel>
+                    <ProgressLabel>32%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>React</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={75} color='#00DCFF'/>
+                        <ProgressBarFiller value={71} color='#00DCFF'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>75%</ProgressLabel>
+                    <ProgressLabel>71%</ProgressLabel>
                 </Skill>
             </SkillsList>
         </SkillsContainer>
