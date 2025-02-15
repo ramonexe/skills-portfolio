@@ -17,7 +17,7 @@ const Titulo = styled.h1`
     text-align: left;
     font-size: 7vh;
     font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif, serif;
+    font-family: 'Poppins', serif;
     margin: 0;
     padding-top: 25px;
     white-space: nowrap;
@@ -62,7 +62,7 @@ const pulse = keyframes`
 `;
 
 const Foto = styled.div`
-  background-image: url("https://avatars.githubusercontent.com/u/143695500?v=4");
+  background-image: url("https://cdn-icons-png.flaticon.com/512/9182/9182925.png");
   background-size: cover;
   background-position: center;
   height: 25vh;
