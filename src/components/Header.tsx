@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Header = styled.header`
   background-color: rgba(0, 0, 0, 0.5);
@@ -29,9 +30,11 @@ const Navbar = styled.nav`
   }
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(ScrollLink)`
   color: ${(props) => props.theme.colors.text};
   text-decoration: none;
+  cursor: pointer;
+  
   &:hover {
     text-decoration: underline;
   }
@@ -41,9 +44,9 @@ const HeaderComponent = () => {
   return (
     <Header>
       <Navbar>
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#skills">Skills</NavLink>
-        <NavLink href="#about">About</NavLink>
+        <NavLink to="home" smooth={true} duration={500}>Home</NavLink>
+        <NavLink to="skills" smooth={true} duration={500}>Skills</NavLink>
+        <NavLink to="about" smooth={true} duration={500}>About</NavLink>
       </Navbar>
     </Header>
   );

@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Skills from '../components/Skills';
 import CustomSections from '../UI/CustomSections';
+import { Fade } from 'react-awesome-reveal';
 
 const Home = () => {
     return (
@@ -10,11 +11,15 @@ const Home = () => {
             <CustomSections id='home'>
                 <Header />
             </CustomSections>
-            <CustomSections id='home'>
-                <Hero />
+            <CustomSections id='hero'>
+                <Fade>
+                    <Hero />
+                </Fade>
             </CustomSections>
             <CustomSections id='skills'>
-                <Skills />
+                <Fade>
+                    <Skills />
+                </Fade>
             </CustomSections>
         </Wrapper>
     );
