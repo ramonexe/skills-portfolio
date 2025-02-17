@@ -11,31 +11,43 @@ const SkillsContainer = styled.div`
 `;
 
 const Titulo = styled.h1`
-    text-align: left;
-    font-size: 4vh;
+    font-size: 3vh;
     font-weight: 400;
+    padding-bottom: 20px;
     font-family: 'Poppins', serif;
     margin: 0;
-    padding-top: 25px;
     white-space: nowrap;
     color: ${(props) => props.theme.colors.text};
 
     @media (max-width: 768px) {
-        font-size: 2vh;
+        font-size: 1.5vh;
+    }
+`;
+
+const Description = styled.p`
+    font-size: 1.5vh;
+    font-weight: 300;
+    font-family: 'Poppins', serif;
+    margin: 0;
+    margin-top: 20px;
+    color: ${(props) => props.theme.colors.text};
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 1vh;
     }
 `;
 
 const SkillsList = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     margin-top: 20px;
     width: 100%;
 
     @media (max-width: 1200px) {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 `;
@@ -44,11 +56,29 @@ const Skill = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 500px;
     padding: 20px;
     background-color: ${(props) => props.theme.colors.background};
     border-radius: 10px;
     box-shadow: 0 0 8px 2px rgba(194, 220, 242, 0.2);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px rgba(194, 220, 242, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        width: 400px;
+    }
+    
+    @media (max-width: 480px) {
+        width: 320px;
+    }
+
+    @media (max-width: 320px) {
+        width: 260px;
+    }
 `;
 
 const SkillName = styled.h3`
@@ -90,37 +120,54 @@ const ProgressLabel = styled.span`
 const Skills = () => {
     return (
         <SkillsContainer>
-            <Titulo>All my skills</Titulo>
+            <Titulo>My most used languages</Titulo>
             <SkillsList>
                 <Skill>
                     <SkillName>JavaScript</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={48} color='#F5DD1B'/>
+                        <ProgressBarFiller value={37} color='#F5DD1B'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>48%</ProgressLabel>
+                    <ProgressLabel>37%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>TypeScript</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={67} color='#2F74C0'/>
+                        <ProgressBarFiller value={44} color='#2F74C0'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>67%</ProgressLabel>
+                    <ProgressLabel>44%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>Java</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={32} color='#E21E22'/>
+                        <ProgressBarFiller value={16} color='#E21E22'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>32%</ProgressLabel>
+                    <ProgressLabel>16%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>React</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={71} color='#00DCFF'/>
+                        <ProgressBarFiller value={62} color='#00DCFF'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>71%</ProgressLabel>
+                    <ProgressLabel>62%</ProgressLabel>
+                </Skill>
+                <Skill>
+                    <SkillName>CSS</SkillName>
+                    <ProgressBarContainer>
+                        <ProgressBarFiller value={59} color='#a129f1'/>
+                    </ProgressBarContainer>
+                    <ProgressLabel>59%</ProgressLabel>
+                </Skill>
+                <Skill>
+                    <SkillName>HTML</SkillName>
+                    <ProgressBarContainer>
+                        <ProgressBarFiller value={67} color='#e34c26'/>
+                    </ProgressBarContainer>
+                    <ProgressLabel>67%</ProgressLabel>
                 </Skill>
             </SkillsList>
+            <Description>
+            The percentage is based on my experience and the difficulty/robustness of each language. Not necessarily how long I've been using it.
+            </Description>
         </SkillsContainer>
     );
 };

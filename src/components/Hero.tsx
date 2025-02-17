@@ -15,7 +15,7 @@ const HeroContainer = styled.div`
 
 const Titulo = styled.h1`
     text-align: left;
-    font-size: 7vh;
+    font-size: 6vh;
     font-weight: 400;
     font-family: 'Poppins', serif;
     margin: 0;
@@ -32,7 +32,6 @@ const Buttons = styled.div`
     display: flex;
     white-space: nowrap;
     gap: 20px;
-    margin-bottom: 15vh;
 `;
 
 const Subtitulo = styled.h2`

@@ -8,6 +8,7 @@ const CustomSections = styled.section`
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
+    overflow: hidden;
 `;
 
 export default CustomSections;
