@@ -20,7 +20,7 @@ const Titulo = styled.h1`
     color: ${(props) => props.theme.colors.text};
 
     @media (max-width: 768px) {
-        font-size: 1.5vh;
+        font-size: 2vh;
     }
 `;
 
@@ -34,7 +34,7 @@ const Description = styled.p`
     text-align: center;
 
     @media (max-width: 768px) {
-        font-size: 1vh;
+        font-size: 1.5vh;
     }
 `;
 
@@ -47,7 +47,6 @@ const SkillsList = styled.div`
     width: 100%;
 
     @media (max-width: 1200px) {
-        flex-direction: column;
         align-items: center;
     }
 `;
@@ -68,16 +67,24 @@ const Skill = styled.div`
         box-shadow: 0 0 15px rgba(194, 220, 242, 0.4);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
         width: 400px;
+    }
+
+    @media (max-width: 768px) {
+        width: 200px;
     }
     
     @media (max-width: 480px) {
-        width: 320px;
+        width: 150px;
+    }
+
+    @media (max-width: 375px) {
+        width: 120px;
     }
 
     @media (max-width: 320px) {
-        width: 260px;
+        width: 80px;
     }
 `;
 
@@ -166,7 +173,8 @@ const Skills = () => {
                 </Skill>
             </SkillsList>
             <Description>
-            The percentage is based on my experience and the difficulty/robustness of each language. Not necessarily how long I've been using it.
+                <p>The percentage is based on my experience and the difficulty/robustness of each language.</p>
+                <p>Not necessarily how long I've been using it.</p>
             </Description>
         </SkillsContainer>
     );

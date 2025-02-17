@@ -29,6 +29,10 @@ const Navbar = styled.nav`
   @media (max-width: 768px) {
     max-width: 320px;
   }
+
+  @media (max-width: 320px) {
+    max-width: 200px;
+  }
 `;
 
 const NavLink = styled(ScrollLink)`
