@@ -3,7 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { useEffect, useState } from 'react';
 
 const Header = styled.header`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(177, 177, 177, 0.5);
   backdrop-filter: blur(10px);
   color: ${(props) => props.theme.colors.text};
   width: 100%;
@@ -93,14 +93,14 @@ const HeaderComponent = () => {
           Skills
         </NavLink>
         <NavLink
-          to="about"
+          to="projects"
           smooth={true}
           duration={500}
           spy={true}
           className="about"
           onSetActive={() => setActiveLink('about')}
         >
-          About
+          Projects
         </NavLink>
         <ActiveBorder left={borderStyle.left} width={borderStyle.width} />
       </Navbar>

@@ -5,6 +5,7 @@ import Skills from '../sections/Skills';
 import CustomSections from '../UI/CustomSections';
 import { useInView } from 'react-intersection-observer';
 import styled, { keyframes } from 'styled-components';
+import Projects from '../sections/Projects';
 
 const fadeIn = keyframes`
   from {
@@ -33,6 +34,10 @@ const Home = () => {
     triggerOnce: false,
     threshold: 0.1,
   });
+  const { ref: projectsRef, inView: projectsInView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
 
   return (
     <Wrapper>
@@ -45,6 +50,11 @@ const Home = () => {
       <CustomSections id='skills'>
         <AnimatedSection ref={skillsRef} inView={skillsInView}>
           <Skills />
+        </AnimatedSection>
+      </CustomSections>
+      <CustomSections id='projects'>
+        <AnimatedSection ref={projectsRef} inView={projectsInView}>
+          <Projects />
         </AnimatedSection>
       </CustomSections>
     </Wrapper>

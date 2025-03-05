@@ -17,8 +17,8 @@ const HeroContainer = styled.div`
 const Titulo = styled.h1`
     text-align: left;
     font-size: 6vh;
-    font-weight: 400;
-    font-family: 'Poppins', serif;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
     margin: 0;
     padding-top: 25px;
     white-space: nowrap;
@@ -51,13 +51,13 @@ const Subtitulo = styled.h2`
 
 const pulse = keyframes`
   0% {
-    box-shadow: 0 0 8px 2px rgba(194, 220, 242, 0.2);
+    box-shadow: 0 0 8px 2px rgba(30, 34, 37, 0.2);
   }
   50% {
-    box-shadow: 0 0 40px 4px rgba(194, 220, 242, 1);
+    box-shadow: 0 0 40px 4px #434c53;
   }
   100% {
-    box-shadow: 0 0 8px 2px rgba(194, 220, 242, 0.2);
+    box-shadow: 0 0 8px 2px rgba(30, 34, 37, 0.2);
   }
 `;
 
@@ -88,8 +88,8 @@ const Hero = () => {
                 <Typing text={["Beginner Developer", "Possible Fullstack", "But PRO on front-end", "Hire me please"]} speed={60} eraseDelay={1000} typingDelay={20} eraseSpeed={20} />
             </Subtitulo>
             <Buttons>
-                <Button variant="contained" startIcon={<GoDownload />} href="/cv.pdf" download="Ramon_Garcia_CV.pdf" sx={{ backgroundColor: "#1f3661", color: "white", "&:hover": { backgroundColor: "#1c59c9", }, whiteSpace: "nowrap", }}>Download CV</Button>
-                <Button variant="contained" target="_blank" rel="noopener noreferrer" href="https://wa.me/5511953432576"  sx={{ backgroundColor: "#181f2c", color: "#17aa54", "&:hover": { backgroundColor: "#17aa54", color: "white" }, }}>Contact-me</Button>
+                <Button variant="contained" startIcon={<GoDownload />} href="/cv.pdf" download="Ramon_Garcia_CV.pdf" sx={{ backgroundColor: "#1f3661", color: "white", "&:hover": { backgroundColor: "#1c59c9", }, whiteSpace: "nowrap", transition: "background-color 0.2s"}}>Download CV</Button>
+                <Button variant="contained" target="_blank" rel="noopener noreferrer" href="https://wa.me/5511953432576"  sx={{ backgroundColor: "#181f2c", color: "#17aa54", "&:hover": { backgroundColor: "#17aa54", color: "white" }, whiteSpace: "nowrap", transition: "background-color 0.2s"}}>Contact-me</Button>
             </Buttons>
         </HeroContainer>
     );

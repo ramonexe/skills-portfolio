@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import backgroundSvg from '../assets/bgsvg.svg'
 
 export const GlobalStyles = createGlobalStyle`
   html {
@@ -11,12 +10,11 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     margin: 0;
     padding: 0;
-    background-image: url(${backgroundSvg});
     background-color: #000000;
     background-attachment: fixed;
     background-size: cover;
     color: ${props => props.theme.colors.text};
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 
     a {
       text-decoration: none;
@@ -29,5 +27,22 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 `

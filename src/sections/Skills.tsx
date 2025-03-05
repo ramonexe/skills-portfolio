@@ -10,11 +10,9 @@ const SkillsContainer = styled.div`
     color: ${(props) => props.theme.colors.text};
 `;
 
-const Titulo = styled.h1`
+const Titulo = styled.h2`
     font-size: 3vh;
-    font-weight: 400;
     padding-bottom: 20px;
-    font-family: 'Poppins', serif;
     margin: 0;
     white-space: nowrap;
     color: ${(props) => props.theme.colors.text};
@@ -59,7 +57,7 @@ const Skill = styled.div`
     padding: 20px;
     background-color: ${(props) => props.theme.colors.background};
     border-radius: 10px;
-    box-shadow: 0 0 8px 2px rgba(194, 220, 242, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 
     &:hover {
@@ -127,49 +125,49 @@ const ProgressLabel = styled.span`
 const Skills = () => {
     return (
         <SkillsContainer>
-            <Titulo>My most used languages</Titulo>
+            <Titulo>Skill languages</Titulo>
             <SkillsList>
                 <Skill>
                     <SkillName>JavaScript</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={37} color='#F5DD1B'/>
+                        <ProgressBarFiller value={15.22} color='#F5DD1B'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>37%</ProgressLabel>
+                    <ProgressLabel>15.22%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>TypeScript</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={44} color='#2F74C0'/>
+                        <ProgressBarFiller value={32.38} color='#2F74C0'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>44%</ProgressLabel>
+                    <ProgressLabel>32.38%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>Java</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={16} color='#E21E22'/>
+                        <ProgressBarFiller value={3.16} color='#E21E22'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>16%</ProgressLabel>
+                    <ProgressLabel>3.16%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>React</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={62} color='#00DCFF'/>
+                        <ProgressBarFiller value={24.90} color='#00DCFF'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>62%</ProgressLabel>
+                    <ProgressLabel>24.90%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>CSS</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={59} color='#a129f1'/>
+                        <ProgressBarFiller value={18.13} color='#a129f1'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>59%</ProgressLabel>
+                    <ProgressLabel>18.13%</ProgressLabel>
                 </Skill>
                 <Skill>
                     <SkillName>HTML</SkillName>
                     <ProgressBarContainer>
-                        <ProgressBarFiller value={67} color='#e34c26'/>
+                        <ProgressBarFiller value={16.21} color='#e34c26'/>
                     </ProgressBarContainer>
-                    <ProgressLabel>67%</ProgressLabel>
+                    <ProgressLabel>16.21%</ProgressLabel>
                 </Skill>
             </SkillsList>
             <Description>
