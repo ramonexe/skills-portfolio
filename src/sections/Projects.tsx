@@ -12,6 +12,11 @@ const Section = styled.section`
     height: 100vh;
     width: 100%;
     color: ${(props) => props.theme.colors.text};
+
+    @media (max-width: 1200px) {
+        height: auto;
+        padding-top: 20px;
+    }
 `;
 
 const Titulo = styled.h2`
@@ -30,6 +35,14 @@ const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
 `;
 
 const Projects = () => (

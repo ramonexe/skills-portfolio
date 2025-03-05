@@ -12,6 +12,10 @@ const Card = styled.div`
   &:hover {
     transform: translateY(-5px);
   }
+
+    @media (max-width: 1200px) {
+        width: 90%;
+    }
 `;
 
 const CardImage = styled.img`
