@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import styled, { keyframes } from "styled-components";
 import { GoDownload } from "react-icons/go";
 import Typing from "react-typing-effect";
+import Image from "../assets/pfp.jpg";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -61,7 +62,7 @@ const pulse = keyframes`
 `;
 
 const Foto = styled.div`
-  background-image: url("https://avatars.githubusercontent.com/u/143695500?v=4");
+  background-image: url(${Image});
   background-size: cover;
   background-position: center;
   height: 25vh;
