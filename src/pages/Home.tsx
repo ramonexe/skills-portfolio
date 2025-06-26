@@ -1,11 +1,11 @@
 import Wrapper from '../components/Wrapper';
-import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Skills from '../sections/Skills';
 import CustomSections from '../UI/CustomSections';
 import { useInView } from 'react-intersection-observer';
 import styled, { keyframes } from 'styled-components';
-import Projects from '../sections/Projects';
+import FreelanceProjects from '../sections/FreelanceProjects';
+import PersonalProjects from '../sections/PersonalProjects';
 
 const fadeIn = keyframes`
   from {
@@ -38,10 +38,13 @@ const Home = () => {
     triggerOnce: false,
     threshold: 0.1,
   });
+  const { ref: personalProjectsRef, inView: personalProjectsInView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
 
   return (
     <Wrapper>
-        <Header />
       <CustomSections id='hero'>
         <AnimatedSection ref={heroRef} inView={heroInView}>
           <Hero />
@@ -52,9 +55,14 @@ const Home = () => {
           <Skills />
         </AnimatedSection>
       </CustomSections>
+      <CustomSections id='personalprojects'>
+        <AnimatedSection ref={personalProjectsRef} inView={personalProjectsInView}>
+          <PersonalProjects />
+        </AnimatedSection>
+      </CustomSections>
       <CustomSections id='projects'>
         <AnimatedSection ref={projectsRef} inView={projectsInView}>
-          <Projects />
+          <FreelanceProjects />
         </AnimatedSection>
       </CustomSections>
     </Wrapper>

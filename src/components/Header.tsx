@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { Link as ScrollLink } from 'react-scroll';
-import { useEffect, useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const Header = styled.header`
-  background-color: rgba(177, 177, 177, 0.5);
+  background-color: ${(props) => props.theme.colors.headerBackground};
   backdrop-filter: blur(10px);
   color: ${(props) => props.theme.colors.text};
   width: 100%;
@@ -13,14 +12,17 @@ const Header = styled.header`
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease;
 `;
 
 const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   gap: 20px;
+  padding: 0 20px;
 
   @media (max-width: 1200px) {
     max-width: 768px;
@@ -35,74 +37,12 @@ const Navbar = styled.nav`
   }
 `;
 
-const NavLink = styled(ScrollLink)`
-  color: ${(props) => props.theme.colors.text};
-  text-decoration: none;
-  cursor: pointer;
-  
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-const ActiveBorder = styled.div<{ left: number; width: number }>`
-  position: absolute;
-  bottom: 0;
-  left: ${(props) => props.left}px;
-  width: ${(props) => props.width}px;
-  height: 2px;
-  background-color: ${(props) => props.theme.colors.text};
-  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
-`;
-
 const HeaderComponent = () => {
-  const [activeLink, setActiveLink] = useState<string | null>(null);
-  const [borderStyle, setBorderStyle] = useState<{ left: number; width: number }>({ left: 0, width: 0 });
-
-  useEffect(() => {
-    if (activeLink) {
-      const activeElement = document.querySelector(`.${activeLink}`);
-      if (activeElement) {
-        const { offsetLeft, offsetWidth } = activeElement as HTMLElement;
-        setBorderStyle({ left: offsetLeft, width: offsetWidth });
-      }
-    }
-  }, [activeLink]);
 
   return (
     <Header>
       <Navbar>
-        <NavLink
-          to="hero"
-          smooth={true}
-          duration={500}
-          spy={true}
-          className="hero"
-          onSetActive={() => setActiveLink('hero')}
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="skills"
-          smooth={true}
-          duration={500}
-          spy={true}
-          className="skills"
-          onSetActive={() => setActiveLink('skills')}
-        >
-          Skills
-        </NavLink>
-        <NavLink
-          to="projects"
-          smooth={true}
-          duration={500}
-          spy={true}
-          className="about"
-          onSetActive={() => setActiveLink('about')}
-        >
-          Projects
-        </NavLink>
-        <ActiveBorder left={borderStyle.left} width={borderStyle.width} />
+        <ThemeToggle />
       </Navbar>
     </Header>
   );

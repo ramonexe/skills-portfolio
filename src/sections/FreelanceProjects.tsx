@@ -3,13 +3,14 @@ import ProjectCard from '../components/ProjectCard';
 import project1 from '../assets/project1.jpg';
 import project2 from '../assets/project2.jpg';
 import project3 from '../assets/project3.jpg';
+import Sparkle from "../assets/sparkle.png";
 
 const Section = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding-bottom: 20px;
     width: 100%;
     color: ${(props) => props.theme.colors.text};
 
@@ -45,9 +46,54 @@ const ProjectsGrid = styled.div`
     }
 `;
 
-const Projects = () => (
+const SparkleElement = styled.div`
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url(${Sparkle});
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+  
+  &.sparkle-1 {
+    top: 8%;
+    left: 0%;
+  }
+  
+  &.sparkle-2 {
+    top: 45%;
+    right: 0%;
+    width: 55px;
+    height: 55px;
+  }
+
+      &.sparkle-3 {
+        top: 0.9%;
+        right: 38%;
+        width: 25px;
+        height: 25px;
+    }
+
+  @media (max-width: 768px) {
+    &.sparkle-1 {
+        top: 83%;
+        left: 6%;
+    }
+
+    &.sparkle-3 {
+        top: 4%;
+        right: 20%;
+    }
+  }
+`;
+
+const FreelanceProjects = () => (
     <Section id="projects">
-        <Titulo>Projects</Titulo>
+        <SparkleElement className="sparkle-1" />
+        <SparkleElement className="sparkle-2" />
+        <SparkleElement className="sparkle-3" />
+        <Titulo>Projetos Freelance</Titulo>
         <ProjectsGrid>
             <ProjectCard
                 image={project1}
@@ -71,4 +117,4 @@ const Projects = () => (
     </Section>
 );
 
-export default Projects;
+export default FreelanceProjects;
