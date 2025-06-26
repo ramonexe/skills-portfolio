@@ -4,28 +4,28 @@ export const GlobalStyles = createGlobalStyle`
 
   @font-face {
     font-family: 'TheAlchemist';
-    src: url('/src/assets/fonts/TheAlchemist.otf') format('opentype');
+    src: url('/fonts/TheAlchemist.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'FontError';
-    src: url('/src/assets/fonts/FontError.TTF') format('truetype');
+    src: url('/fonts/FontError.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'MainLux';
-    src: url('/src/assets/fonts/MainLux.otf') format('opentype');
+    src: url('/fonts/MainLux.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'PirateOne';
-    src: url('/src/assets/fonts/PirateOne.ttf') format('truetype');
+    src: url('/fonts/PirateOne.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
